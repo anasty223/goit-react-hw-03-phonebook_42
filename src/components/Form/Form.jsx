@@ -1,8 +1,13 @@
-
+import PropTypes from 'prop-types'
 import {Input,Label,ButtonAdd}from './Form.styles'
 import { Component } from "react";
 
 class Form extends Component {
+static defaultProps = {
+   onSubmit:PropTypes.func.isRequired,
+  }
+
+
   state = {
     name: '',
     number:'',
